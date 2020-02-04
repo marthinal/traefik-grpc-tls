@@ -1,0 +1,27 @@
+entryPoints:
+  websecure:
+    address: :4443
+
+log:
+  level: DEBUG
+
+api:
+  dashboard: true
+  insecure: true
+
+serversTransport:
+  insecureSkipVerify: true
+
+ping: {}
+
+providers:
+  file:
+    filename: /etc/traefik/dynamic_config.yml
+    watch: true
+
+  docker:
+    defaultRule: "Host(`frontend.local`)"
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+    network: limon
+    watch: true
