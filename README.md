@@ -1,4 +1,4 @@
-TRAEFIK - GRPC with TLS EXAMPLE
+__TRAEFIK - GRPC with TLS EXAMPLE__
 
 Traefik as reverse proxy for gRPC application with self-signed certificates.
 
